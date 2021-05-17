@@ -7,6 +7,7 @@ section { text-align: left; margin: 40 0 0 40;}
 </head>
 <body>
     <h1>My Page</h1>
+    <h2>ユーザー情報</h2>
     <section>
         <h3>ユーザーネーム：</h3>
         <h3>メールアドレス：</h3>
