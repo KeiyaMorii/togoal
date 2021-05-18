@@ -7,7 +7,8 @@
     </style>
 </head>
 <body>
-    <p>Top</p>
+    <p><a href="/select">Top</a></p>
+    
     <h1>My Goal</h1>
     <input type="date" name="goal">
     <table border="1">
