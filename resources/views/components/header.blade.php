@@ -1,5 +1,5 @@
 <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a href="/" class="navbar-brand">TODO App</a>
+  <a href="/" class="navbar-brand">TO GOAL</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -29,5 +29,4 @@
             @endauth
         </ul>
     </div>
-  </button>
 </header>
