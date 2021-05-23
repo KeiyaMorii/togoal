@@ -1,8 +1,9 @@
 <html>
 
 <head>
+  <title>パスワード変更</title>
 <style>
-p { font-size: 25px;}
+p { font-size: 20px; text-align: right; }
 form{ background-color: #dbedf0; padding:30px 30px; }
 form dl dt{ width: 165px; padding:10px 0; float:left; clear:both; }
 form dl dd{ padding:14px 0; }
@@ -10,7 +11,9 @@ form dl dd{ padding:14px 0; }
 </style> 
 </head>
 <body>
-    <p>パスワード変更</p>
+    <p><a href="/home">Top</a></p>
+
+    <h1>パスワード変更</h1>
     <form action="">
       <dl>
         <dt>パスワード入力: </dt>

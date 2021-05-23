@@ -1,23 +1,32 @@
-@extends('layouts.app')
+<html>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<head>
+    <title>To Goal</title>
+<style>
+    p { font-size: 20px; text-align: right; }
+    li { font-size: 30px; padding: 10px;}
+</style> 
+</head>
+<body>
+<p><a href="/home">Top</a></p>
+@auth
+    <ul>
+        <li><a href="user/page">My Page</a></li>
+        <li><a href="user/mygoal">My Goal</a></li>
+        <li>
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+            </li>
+            @else
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('register') }}">新規登録</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">ログイン</a>
+            </li>
+            @endauth
+    </ul>
+</body>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+</html>

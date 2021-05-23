@@ -1,8 +1,9 @@
 <html>
 
 <head>
+  <title>プロフィール編集</title>
 <style>
-p { font-size: 25px;}
+p { font-size: 20px; text-align: right; }
 form{ background-color: #dbedf0; padding:30px 30px; }
 form dl dt{ width: 165px; padding:10px 0; float:left; clear:both; }
 form dl dd{ padding:10px 0; }
@@ -10,7 +11,9 @@ form dl dd{ padding:10px 0; }
 </style> 
 </head>
 <body>
-    <p>プロフィール編集</p>
+    <p><a href="/home">Top</a></p>
+    
+    <h1>プロフィール編集</h1>
     <form action="">
       <dl>
         <dt>ユーザーネーム: </dt>
