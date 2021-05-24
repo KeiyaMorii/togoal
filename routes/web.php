@@ -24,5 +24,6 @@ Route::get('user/mygoal', 'UserController@store');
 Route::get('user/info', 'UserController@show');
 Route::get('user/edit', 'UserController@edit');
 Route::get('user/pass', 'UserController@update');
+Route::get('user/register', 'UserController@create');
 
 Route::get('main', 'HomeController@show');
