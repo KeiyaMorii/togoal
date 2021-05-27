@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +20,26 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <style>
-    form{ background-color: #eaf6fd; color: #000000; padding:30px 30px; }
+        .forget { margin: auto; }
+    </style>
+
+    <style>
+        main {
+            height: calc(100vh - 50px);
+            min-height: calc(100vh - 50px);
+            padding-top: 60px;
+        }
+
+        footer {
+            height: 50px;
+        }
+
+        .bg-home {
+            background-color: #97cdf3;
+        }
     </style>
 </head>
+
 <body>
     <div id="app">
         @component('components.header')
@@ -30,9 +48,13 @@
         @component('components.flash')
         @endcomponent
 
-        <main>
-            <div class="container-fruid h-100 p-2 d-flex flex-column">
-                @yield('content')
+        <main class="bg-home d-flex align-items-center w-100 h-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-11 col-lg-10 jumbotron mx-auto mt-4" style="box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2)">
+                        @yield('content')
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -40,4 +62,5 @@
         @endcomponent
     </div>
 </body>
+
 </html>

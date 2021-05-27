@@ -8,7 +8,6 @@
 </style> 
 </head>
 <body>
-<p><a href="/home">Top</a></p>
 @auth
     <ul>
         <li><a href="user/page">My Page</a></li>
