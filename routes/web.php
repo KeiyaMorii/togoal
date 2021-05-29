@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('main');
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource("goals", "GoalController");
+
+Route::resource("goals.todos", "TodoController");
+
+Route::post('/goals/{goal}/todos/{todo}/sort', 'TodoController@sort');
+
+Auth::routes();
 
 Route::get('user/page', 'UserController@index');
 Route::get('user/mygoal', 'UserController@store');

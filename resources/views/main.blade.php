@@ -39,7 +39,7 @@
         </table>
         <table border="2">
             <tr><td bgcolor="#00a9ff">食事管理</td><td bgcolor="#00a9ff">健康に過ごす</td><td bgcolor="#00a9ff">ストレスをためない</td></tr>
-            <tr><td bgcolor="#00a9ff">睡眠をとる</td><td bgcolor="#de4d4d">長生きをする</td><td bgcolor="#00a9ff">身体を動かす</td></tr>
+            <tr><td bgcolor="#00a9ff">睡眠をとる</td><td bgcolor="#f5a500">長生きをする</td><td bgcolor="#00a9ff">身体を動かす</td></tr>
             <tr><td bgcolor="#00a9ff">ポジティブ思考</td><td bgcolor="#00a9ff">趣味を楽しむ</td><td bgcolor="#00a9ff">人と話す</td></tr>
         </table>
         <table border="2">
