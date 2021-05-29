@@ -4,9 +4,9 @@
     <style>
     h1 { font-family: serif; font-size: 30px; color: black; float: right; margin-top: 200; margin-right: 400; }
     h2 { font-family: serif; font-size: 30px; color: black; float: right; margin-top: 350; margin-right: -123; }
-    table { table-layout: fixed; width: 220; height: 220; border-style: outset; border-color: black; border-collapse: collapse; }
-    table td { font-size: 12px; font-weight: bold; font-family: serif; border-style: dotted;word-wrap: break-word; text-align: center; height: 75; }
-    .mandara {margin-top: 45px; display: flex;}
+    table { table-layout: fixed; border-style: outset; border-color: black; border-collapse: collapse; }
+    table td { font-size: 12px; font-weight: bold; font-family: serif; border-style: dotted;word-wrap: break-word; text-align: center; width: 65; height: 65; }
+    .mandara {margin-top: 70px; display: flex;}
     .mandara_middle {display: flex;}
     .mandara_under {display: flex;}
     </style>

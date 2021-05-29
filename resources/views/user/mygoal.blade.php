@@ -2,8 +2,19 @@
 <head>
     <title>My Goal</title>
     <style>
+    h1 { margin-top: -50; }
     p { font-size: 20px; text-align: right; }
-    table { table-layout: fixed; width: 1100; height: 300; margin-left: auto; margin-right: auto;}
+    table {  table-layout: fixed; border-style: outset; border-color: black; border-collapse: collapse; }
+    table td { font-size: 12px; font-weight: bold; font-family: serif; border-style: dotted;word-wrap: break-word; text-align: center; width: 75; height: 75; }
+    .mandara {margin-top: -60px; display: flex;}
+    .mandara_middle {display: flex;}
+    .mandara_under {display: flex;}
+    .left_top { margin-left: auto; }
+    .right_top { margin-right: auto; }
+    .left_middle { margin-left: auto; }
+    .right_middle { margin-right: auto; }
+    .left_under { margin-left: auto; }
+    .right_under { margin-right: auto; }
     </style>
 </head>
 <body>
@@ -11,38 +22,56 @@
     
     <h1>My Goal</h1>
     <input type="date" name="goal">
-    <table border="1">
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-    </table>
-    <table border="1">
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-    </table>
-    <table border="1">
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-    </table>
+    <div class="mandara">
+        <table border="2" class="left_top">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+        <table border="2">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+        <table border="2" class="right_top">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+    <div class="mandara_middle">
+        <table border="2" class="left_middle">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+        <table border="2">
+            <tr><td bgcolor="#00a9ff"></td><td bgcolor="#00a9ff"></td><td bgcolor="#00a9ff"></td></tr>
+            <tr><td bgcolor="#00a9ff"></td><td bgcolor="#f5a500"></td><td bgcolor="#00a9ff"></td></tr>
+            <tr><td bgcolor="#00a9ff"></td><td bgcolor="#00a9ff"></td><td bgcolor="#00a9ff"></td></tr>
+        </table>
+        <table border="2" class="right_middle">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+    <div class="mandara_under">
+        <table border="2" class="left_under">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+        <table border="2">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+        <table border="2" class="right_under">
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td bgcolor="#00a9ff"></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+    </div>
 </body>
 </html>
