@@ -27,6 +27,8 @@ Auth::routes();
 
 Route::get('user/page', 'UserController@index');
 Route::get('user/mygoal', 'UserController@store');
+Route::get('user/mygoal2', 'UserController@goal');
+Route::get('user/mygoal3', 'UserController@goal2');
 Route::get('user/info', 'UserController@show');
 Route::get('user/edit', 'UserController@edit');
 Route::get('user/pass', 'UserController@update');

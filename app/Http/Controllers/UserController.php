@@ -38,6 +38,16 @@ class UserController extends Controller
         return view('user/mygoal');
     }
 
+    public function goal(Request $request)
+    {
+        return view('user/mygoal2');
+    }
+
+    public function goal2(Request $request)
+    {
+        return view('user/mygoal3');
+    }
+
     /**
      * Display the specified resource.
      *

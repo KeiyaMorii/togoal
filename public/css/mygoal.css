@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+    h1 { margin-top: -50; }
+    p { font-size: 20px; text-align: right; }
+    table {  table-layout: fixed; border-style: outset; border-color: black; border-collapse: collapse; }
+    table td { font-size: 12px; font-weight: bold; font-family: serif; border-style: dotted;word-wrap: break-word; text-align: center; width: 75; height: 75; }
+    .mandara {margin-top: -90px; display: flex;}
+    .mandara_middle {display: flex;}
+    .mandara_under {display: flex;}
+    .left_top { margin-left: auto; }
+    .right_top { margin-right: auto; }
+    .left_middle { margin-left: auto; }
+    .right_middle { margin-right: auto; }
+    .left_under { margin-left: auto; }
+    .right_under { margin-right: auto; }
+    .pagination { font-size: 15pt; text-align: right; margin-top: -35; }
+    .pagination li { display: inline-block; }
