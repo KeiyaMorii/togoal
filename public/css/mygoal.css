@@ -13,5 +13,5 @@
     .right_middle { margin-right: auto; }
     .left_under { margin-left: auto; }
     .right_under { margin-right: auto; }
-    .pagination { font-size: 15pt; text-align: right; margin-top: -35; }
-    .pagination li { display: inline-block; }
+    .btn-page { height: 90%; width: 90%; opacity: 0; }
+    .justify-content-end { font-size: 15pt; margin-top: -45; }
