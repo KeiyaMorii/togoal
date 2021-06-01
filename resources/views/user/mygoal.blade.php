@@ -1,4 +1,3 @@
-
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +10,7 @@
     <p><a href="/home">Top</a></p>
     
     <h1>My Goal</h1>
-    <h3>目標達成日</h3>
+    <h3>目標日</h3>
     <input type="date" name="goal">
 
     <div class="mandara">
@@ -145,7 +144,7 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <input type="text" id="todo" name="todo" size="45">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
