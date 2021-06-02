@@ -10,12 +10,12 @@
     <p><a href="/home">Top</a></p>
     
     <h1>My Goal</h1>
-    <h3>目標日</h3>
+    <h3>達成目標日</h3>
     <input type="date" name="goal">
 
     <div class="mandara">
         <table border="2" class="left_top">
-            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
+            <tr><td>{{ $positions->position }}<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
             <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
@@ -48,6 +48,7 @@
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
         </table>
     </div>
+    
     <div class="mandara_middle">
         <table border="2" class="left_middle">
         <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
@@ -119,6 +120,8 @@
         </table>
     </div>
 
+    </form>
+
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
@@ -148,7 +151,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-        <button type="button" class="btn btn-primary">保存</button>
+        <a href="mygoal"><button type="button" class="btn btn-primary">保存</button></a>
       </div>
     </div>
   </div>

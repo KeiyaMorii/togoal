@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Todo;
+use App\Goal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -29,7 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('auth/register');
+        
     }
 
     /**
@@ -40,6 +44,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $positions = DB::select('select * from todos');
         return view('user/mygoal');
     }
 
