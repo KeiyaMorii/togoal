@@ -36,7 +36,7 @@ class TodoController extends Controller
         $todo->done = false;
         $todo->save();
         $todos = $goal->todos()->orderBy('done', 'asc')->orderBy('position', 'asc')->get();
-        return view('user/mygoal');
+        return response()->json($todos);
     }
 
     /**

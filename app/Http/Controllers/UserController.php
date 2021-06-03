@@ -26,14 +26,32 @@ class UserController extends Controller
         return view('user/page');
     }
 
+    public function post(Request $request)
+    {
+        $items = DB::select('select * from todos');
+        return view('user.mygoal', ['items' => $items]);
+    }
+
+    public function add(Request $request)
+    {
+        return view('user/mygoal');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('user.mygoal');
+        $param = [
+            'name' => $request->name,
+            'mail' => $request->mail,
+            'position' => $request->position,
+        ];
+        DB::insert('insert into todo (name, mail, position) values (:name, :mail, :position)', $param);
+        return redirect('/user');
     }
 
     /**
@@ -44,16 +62,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $todo = new Todo();
-        $todo->position = $request->input('position');
-        $todo->save();
-
-        return view('user/mygoal');
+        // return view('user/mygoal');
     }
 
-    public function show(Todo $todo)
+    public function show()
     {
-        return view('user.show', compact('post'));
+        // return view('user.show', compact('post'));
     }
 
     public function goal(Request $request)
