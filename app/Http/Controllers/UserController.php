@@ -33,7 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+        return view('user.mygoal');
     }
 
     /**
@@ -44,8 +44,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $positions = DB::select('select * from todos');
+        $todo = new Todo();
+        $todo->position = $request->input('position');
+        $todo->save();
+
         return view('user/mygoal');
+    }
+
+    public function show(Todo $todo)
+    {
+        return view('user.show', compact('post'));
     }
 
     public function goal(Request $request)
@@ -64,7 +72,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function info(User $user)
     {
         return view('user/info');
     }

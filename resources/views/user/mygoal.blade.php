@@ -12,10 +12,12 @@
     <h1>My Goal</h1>
     <h3>達成目標日</h3>
     <input type="date" name="goal">
+    <form method="POST" action="/user">
+    {{ csrf_field() }}
 
     <div class="mandara">
         <table border="2" class="left_top">
-            <tr><td>{{ $positions->position }}<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
+            <tr><td>{{ $todo->position }}<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
             <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
