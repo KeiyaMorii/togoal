@@ -18,7 +18,6 @@ class CreateTodosTable extends Migration
             $table->text('content');
             $table->integer('user_id');
             $table->integer('goal_id');
-            /* position増やす */
             $table->integer('position');
             $table->boolean('done')->default(false);
             $table->timestamps();

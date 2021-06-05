@@ -12,6 +12,7 @@
     <h1>My Goal</h1>
     <h3>達成目標日</h3>
     <input type="date" name="goal">
+    
     <form method="POST" action="user/mygoal">
     {{ csrf_field() }}
 
@@ -50,7 +51,6 @@
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
         </table>
     </div>
-    
     <div class="mandara_middle">
         <table border="2" class="left_middle">
         <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
@@ -121,8 +121,8 @@
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
         </table>
     </div>
-
     </form>
+
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-end">

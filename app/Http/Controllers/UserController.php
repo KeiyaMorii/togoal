@@ -28,15 +28,9 @@ class UserController extends Controller
 
     public function post(Request $request)
     {
-        $items = DB::select('select * from todos');
-        return view('user.mygoal', ['items' => $items]);
+        // $items = DB::table('todos')->find($request->input);
+        // return view('user.mygoal', ['items' => $items]);
     }
-
-    public function add(Request $request)
-    {
-        return view('user/mygoal');
-    }
-
 
     /**
      * Show the form for creating a new resource.
@@ -45,13 +39,8 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        $param = [
-            'name' => $request->name,
-            'mail' => $request->mail,
-            'position' => $request->position,
-        ];
-        DB::insert('insert into todo (name, mail, position) values (:name, :mail, :position)', $param);
-        return redirect('/user');
+        $param = ['position' => $request->position];
+        return redirect('user/mygoal');
     }
 
     /**
@@ -65,9 +54,10 @@ class UserController extends Controller
         // return view('user/mygoal');
     }
 
-    public function show()
+    public function show(Request $request)
     {
-        // return view('user.show', compact('post'));
+        $items = DB::table('todos')->where('position')->first();
+        return view('user.mygoal',['items' => $items]);
     }
 
     public function goal(Request $request)
