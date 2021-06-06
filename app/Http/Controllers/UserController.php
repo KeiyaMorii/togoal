@@ -54,14 +54,14 @@ class UserController extends Controller
         $todo = new Todo();
         $todo->position = request('position');
         $todo->save();
-        return view('user.mygoal');
+        return redirect('user.mygoal');
     }
 
     public function show(Request $request)
     {
-        $item = Todo::where('position', $request->input)->first();
+        $item = Todo::where('user_id', $request->input);
         $param = ['input' => $request->input, 'item' => $item];
-        return view('user.mygoal',$param);
+        return view('user.mygoal', $param);
     }
 
     public function goal(Request $request)
