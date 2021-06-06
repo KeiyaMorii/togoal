@@ -46,4 +46,17 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Todo');
     }
+
+    protected $guarded = array('id');
+    
+    public static $rules = array(
+        'name' => 'required',
+        'mail' => 'email',
+        'position' => 'text'
+    );
+
+    public function getData()
+    {
+        return $this->position;
+    }
 }

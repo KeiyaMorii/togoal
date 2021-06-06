@@ -15,10 +15,9 @@
     
     <form method="POST" action="user/mygoal">
     {{ csrf_field() }}
-
     <div class="mandara">
         <table border="2" class="left_top">
-            <tr><td>{{ $items->position }}<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
+            <tr><td>{{ $item->position }}<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
             <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
@@ -122,7 +121,6 @@
         </table>
     </div>
     </form>
-
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-end">
