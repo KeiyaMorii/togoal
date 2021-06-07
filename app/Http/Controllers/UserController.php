@@ -8,6 +8,7 @@ use App\Goal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use phpDocumentor\Reflection\Types\Null_;
 
 class UserController extends Controller
 {
@@ -52,6 +53,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $todo = new Todo();
+        $item = [];
         $todo->position = request('position');
         $todo->save();
         return redirect('user.mygoal');
