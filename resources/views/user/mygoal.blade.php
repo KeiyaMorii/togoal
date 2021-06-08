@@ -13,8 +13,6 @@
     <h3>達成目標日</h3>
     <input type="date" name="goal">
     
-    <form method="POST" action="user/mygoal">
-    {{ csrf_field() }}
     <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -25,9 +23,12 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form method="POST" action="user/mygoal">
+    {{ csrf_field() }}
       <div class="modal-body">
-        <input type="text" id="todo" name="todo" size="45" value="{{ $input }}">
+        <input type="text" id="todo" name="content" size="45">
       </div>
+      </form>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
         <a href="mygoal"><button type="button" class="btn btn-primary">保存</button></a>
@@ -38,7 +39,7 @@
 
     <div class="mandara">
         <table border="2" class="left_top">
-            <tr><td>{{ $item->position }}<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
+            <tr><td>@if(isset($item)){{ $item->content }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" wat position1></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
             <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td>
@@ -141,13 +142,13 @@
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal"></button></td></tr>
         </table>
     </div>
-    </form>
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
       <a class="page-link" href="mygoal3" tabindex="-1">Previous</a>
     </li>
+    <!-- mygoal?goal_id1 -->
     <li class="page-item"><a class="page-link" href="mygoal">1</a></li>
     <li class="page-item"><a class="page-link" href="mygoal2">2</a></li>
     <li class="page-item"><a class="page-link" href="mygoal3">3</a></li>

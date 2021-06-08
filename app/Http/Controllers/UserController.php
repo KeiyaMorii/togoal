@@ -40,8 +40,11 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        // $param = ['position' => $request->position];
-        // return redirect('user/mygoal');
+        $todo = new Todo();
+        $todo->content = request('content');
+        dump();
+        $todo->save();
+        return view('user.mygoal');
     }
 
     /**
@@ -52,18 +55,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $todo = new Todo();
-        $item = [];
-        $todo->position = request('position');
-        $todo->save();
-        return redirect('user.mygoal');
+        //
     }
 
     public function show(Request $request)
     {
-        $item = Todo::where('user_id', $request->input);
-        $param = ['input' => $request->input, 'item' => $item];
-        return view('user.mygoal', $param);
+        $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
+        return view('user.mygoal', $items);
     }
 
     public function goal(Request $request)
