@@ -34,20 +34,6 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create(Request $request)
-    {
-        $todo = new Todo();
-        $todo->content = request('content');
-        dump();
-        $todo->save();
-        return view('user.mygoal');
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -58,9 +44,30 @@ class UserController extends Controller
         //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create(Request $request)
+    {
+        $todo = new Todo();
+        $todo->content = request('content');
+        $todo->position = request('position');
+        $todo->save();
+        return view('user.mygoal');
+    }
+
+
     public function show(Request $request)
     {
+        // ログイン中のuser_idのデータ、goal_idが1のデータを取得を取得
         $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
+        // itemsを全件取ってきて各positionに各contentが入るようにする
+        $content = request('content');
+        foreach ($content as $key) {
+            $key = 'position';
+        }
         return view('user.mygoal', $items);
     }
 
