@@ -51,9 +51,17 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
+        // 新しいインスタンスを生成
         $todo = new Todo();
+        // ログイン中のユーザーIDを取得
+        $todo->user_id = Auth::id();
+        // goal_idを取得
+        $todo->goal_id = request('goal_id');
+        // contentを取得
         $todo->content = request('content');
+        // positionを取得
         $todo->position = request('position');
+        // 保存する
         $todo->save();
         return view('user.mygoal');
     }
@@ -64,10 +72,7 @@ class UserController extends Controller
         // ログイン中のuser_idのデータ、goal_idが1のデータを取得を取得
         $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
         // itemsを全件取ってきて各positionに各contentが入るようにする
-        $content = request('content');
-        foreach ($content as $key) {
-            $key = 'position';
-        }
+        var_dump($items);
         return view('user.mygoal', $items);
     }
 
