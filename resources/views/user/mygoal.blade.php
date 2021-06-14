@@ -129,18 +129,23 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="mygoal" method="POST">
-        {{ csrf_field() }}
-      <div class="modal-body">
-        <input type="text" id="todo" name="content" size="45">
-        <input type="hidden" name="position" value="1">
-        <input type="hidden" name="goal_id" value="1">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-        <input type="submit" class="btn btn-primary" value="保存">
-      </div>
-      </form>
+<div class="modal-body">
+    <form action="mygoal" method="POST">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label"></label>
+                    <input type="text" name="content" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="position" value="1">
+                    <input type="hidden" name="goal_id" value="1">
+                </div>
+</div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+            <input type="submit" class="btn btn-primary" value="保存">
+        </div>
+    </form>
     </div>
   </div>
 </div>
