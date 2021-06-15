@@ -70,9 +70,13 @@ class UserController extends Controller
     public function show(Request $request)
     {
         // ログイン中のuser_idのデータ、goal_idが1のデータを取得を取得
-        $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
+        // $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
         // itemsを全件取ってきて各positionに各contentが入るようにする
-        var_dump($items);
+        $items = array(1, 2, 3, 4);
+        foreach ($items as $key) {
+            $key = $key * 2;
+        }
+        var_dump($key);
         return view('user.mygoal', $items);
     }
 

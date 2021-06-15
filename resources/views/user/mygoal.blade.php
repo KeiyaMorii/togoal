@@ -134,10 +134,10 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="recipient-name" class="col-form-label"></label>
-                    <input type="text" name="content" class="form-control" id="recipient-name">
+                    <input type="text" id="reci" name="content" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <input type="hidden" name="position" value="1">
+                    <input type="hidden" id="posi" name="position" value="1">
                     <input type="hidden" name="goal_id" value="1">
                 </div>
 </div>
