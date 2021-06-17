@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use phpDocumentor\Reflection\Types\Null_;
+use Psy\Context;
 
 class UserController extends Controller
 {
@@ -72,15 +73,14 @@ class UserController extends Controller
         // ログイン中のuser_idのデータ、goal_idが1のデータを取得を取得
         $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
         // contentの配列を作成
-        $content = [" "];
-        $_POST["content"];
+        $content = array("test");
         // contentを全件取ってきてuser_idのrequest->contentに置き換える
-        foreach ($content as $key) {
-            echo $key;
-        }
-        var_dump($key);
+        // foreach ($content as $key) {
+            // echo $key;
+        // }
+        var_dump($content);
         // contentをviewで表示する
-        return view('user.mygoal', $content);
+        return view('user.mygoal', compact('key'));
     }
 
     public function goal(Request $request)
