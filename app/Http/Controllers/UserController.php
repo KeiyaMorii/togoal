@@ -73,7 +73,7 @@ class UserController extends Controller
         // ログイン中のuser_idのデータ、goal_idが1のデータを取得を取得
         $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
         // contentの配列を作成
-        $content = array("test");
+        $content = array("content" => "test");
         // contentを全件取ってきてuser_idのrequest->contentに置き換える
         // foreach ($content as $key) {
             // echo $key;
