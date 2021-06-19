@@ -73,14 +73,28 @@ class UserController extends Controller
         // ログイン中のuser_idのデータ、goal_idが1のデータを取得を取得
         $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
         // contentの配列を作成
-        $content = array("content" => "test");
+        $contents = array(
+            "1" => array("content" => 'test',"limit" => "2021/8/30","done" => true),
+            "2" => array("content" => 'sora',"limit" => "2021/9/10","done" => false),
+            "3" => array("content" => 'kumo',"limit" => "2021/9/16","done" => true),
+            "4" => array("content" => 'yuki',"limit" => "2021/9/25","done" => false),
+            "5" => array("content" => 'tuti',"limit" => "2021/10/8","done" => true),
+            "6" => array("content" => 'ki',"limit" => "2021/10/18","done" => false),
+            "7" => array("content" => 'utyuu',"limit" => "2021/10/31","done" => true),
+            "8" => array("content" => 'ame',"limit" => "2021/11/30","done" => false),
+            "9" => array("content" => 'hare',"limit" => "2021/12/25","done" => true),
+            "10" => array("content" => 'kaze',"limit" => "2021/1/23","done" => false),
+        );
+        foreach ($contents as $key => $value) {
+            echo $key . "<br>";
+        }
         // contentを全件取ってきてuser_idのrequest->contentに置き換える
         // foreach ($content as $key) {
             // echo $key;
         // }
-        var_dump($content);
+        // var_dump($contents);
         // contentをviewで表示する
-        return view('user.mygoal', compact('key'));
+        return view('user.mygoal', $items);
     }
 
     public function goal(Request $request)

@@ -15,7 +15,7 @@
 
     <div class="mandara">
         <table border="2" class="left_top">
-            <tr><td>@if(isset($items)){{ $request->content[0] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position1"></button></td>
+            <tr><td>@if(isset($items[1])){{ $request->content }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position1"></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position2"></button></button></td>
                 <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position3"></button></td></tr>
             <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position4"></button></td>
