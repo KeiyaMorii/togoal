@@ -83,17 +83,18 @@ class UserController extends Controller
             "7" => array("content" => 'utyuu',"limit" => "2021/10/31","done" => true),
             "8" => array("content" => 'ame',"limit" => "2021/11/30","done" => false),
             "9" => array("content" => 'hare',"limit" => "2021/12/25","done" => true),
-            "10" => array("content" => 'kaze',"limit" => "2021/1/23","done" => false),
+            "10" => array("content" => 'kaze',"limit" => "2021/1/26","done" => false)
         );
+        $newItems = array();
         foreach ($contents as $key => $value) {
-            echo $key . "<br>";
+                $param[$value->position] = array(
+                    "content" => $value->content,
+                    "limit" => $value->limit,
+                    "done" => $value->done
+                );
         }
-        // contentを全件取ってきてuser_idのrequest->contentに置き換える
-        // foreach ($content as $key) {
-            // echo $key;
-        // }
-        // var_dump($contents);
-        // contentをviewで表示する
+        $items = $newItems;
+        // $param = ['input' => $request->input, 'items' => $items];
         return view('user.mygoal', $items);
     }
 
