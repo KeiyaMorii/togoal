@@ -33,4 +33,4 @@ Route::get('user/edit', 'UserController@edit');
 Route::get('user/pass', 'UserController@update');
 
 Route::get('user/mygoal', 'UserController@show');
-Route::post('user/mygoal', 'UserController@show');
+Route::post('user/mygoal', 'UserController@create');

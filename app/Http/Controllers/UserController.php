@@ -54,17 +54,20 @@ class UserController extends Controller
     {
         // 新しいインスタンスを生成
         $todo = new Todo();
+        // dump($todo);
         // ログイン中のユーザーIDを取得
         $todo->user_id = Auth::id();
+        // dump($todo->user_id);
         // goal_idを取得
         $todo->goal_id = request('goal_id');
         // contentを取得
         $todo->content = request('content');
+        // echo($todo->content);
         // positionを取得
         $todo->position = request('position');
         // 保存する
         $todo->save();
-        return view('user.mygoal');
+        return redirect('user/mygoal');
     }
 
 
@@ -73,29 +76,29 @@ class UserController extends Controller
         // ログイン中のuser_idのデータ、goal_idが1のデータを取得を取得
         $items = Todo::where('user_id', Auth::id())->where('goal_id', 1)->get();
         // contentの配列を作成
-        $contents = array(
-            "1" => array("content" => 'test',"limit" => "2021/8/30","done" => true),
-            "2" => array("content" => 'sora',"limit" => "2021/9/10","done" => false),
-            "3" => array("content" => 'kumo',"limit" => "2021/9/16","done" => true),
-            "4" => array("content" => 'yuki',"limit" => "2021/9/25","done" => false),
-            "5" => array("content" => 'tuti',"limit" => "2021/10/8","done" => true),
-            "6" => array("content" => 'ki',"limit" => "2021/10/18","done" => false),
-            "7" => array("content" => 'utyuu',"limit" => "2021/10/31","done" => true),
-            "8" => array("content" => 'ame',"limit" => "2021/11/30","done" => false),
-            "9" => array("content" => 'hare',"limit" => "2021/12/25","done" => true),
-            "10" => array("content" => 'kaze',"limit" => "2021/1/26","done" => false)
-        );
+        // $contents = array(
+            // "1" => array("content" => 'test',"limit" => "2021/8/30","done" => true),
+            // "2" => array("content" => 'sora',"limit" => "2021/9/10","done" => false),
+            // "3" => array("content" => 'kumo',"limit" => "2021/9/16","done" => true),
+            // "4" => array("content" => 'yuki',"limit" => "2021/9/25","done" => false),
+            // "5" => array("content" => 'tuti',"limit" => "2021/10/8","done" => true),
+            // "6" => array("content" => 'ki',"limit" => "2021/10/18","done" => false),
+            // "7" => array("content" => 'utyuu',"limit" => "2021/10/31","done" => true),
+            // "8" => array("content" => 'ame',"limit" => "2021/11/30","done" => false),
+            // "9" => array("content" => 'hare',"limit" => "2021/12/25","done" => true),
+            // "10" => array("content" => 'kaze',"limit" => "2021/1/26","done" => false)
+        // );
         $newItems = array();
-        foreach ($contents as $key => $value) {
-                $param[$value->position] = array(
+        foreach ($items as $key => $value) {
+                $newItems[$value->position] = array(
                     "content" => $value->content,
                     "limit" => $value->limit,
                     "done" => $value->done
                 );
         }
-        $items = $newItems;
-        // $param = ['input' => $request->input, 'items' => $items];
-        return view('user.mygoal', $items);
+        // $items = $newItems;
+        // dump($items);
+        return view('user.mygoal', ['items'=>$newItems]);
     }
 
     public function goal(Request $request)
