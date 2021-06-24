@@ -49,15 +49,15 @@
     </div>
     <div class="mandara_middle">
         <table border="2" class="left_middle">
-        <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position28"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position29"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position30"></button></td></tr>
-            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position31"></button></td>
-                <td bgcolor="#00a9ff"><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position32"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position33"></button></td></tr>
-            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position34"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position35"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position36"></button></td></tr>
+        <tr><td>@if(isset($items[28])){{ $items[28]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="28"></button></td>
+                <td>@if(isset($items[29])){{ $items[29]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="29"></button></td>
+                <td>@if(isset($items[30])){{ $items[30]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="30"></button></td></tr>
+            <tr><td>@if(isset($items[31])){{ $items[31]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="31"></button></td>
+                <td bgcolor="#00a9ff">@if(isset($items[32])){{ $items[32]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="32"></button></td>
+                <td>@if(isset($items[33])){{ $items[33]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="33"></button></td></tr>
+            <tr><td>@if(isset($items[34])){{ $items[34]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="34"></button></td>
+                <td>@if(isset($items[35])){{ $items[35]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="35"></button></td>
+                <td>@if(isset($items[36])){{ $items[36]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="36"></button></td></tr>
         </table>
         <table border="2">
             <tr><td bgcolor="#00a9ff"><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position37"></button></td>
@@ -155,9 +155,9 @@
       <a class="page-link" href="mygoal3" tabindex="-1">Previous</a>
     </li>
     <!-- mygoal?goal_id1 -->
-    <li class="page-item"><a class="page-link" href="mygoal?goal_id1">1</a></li>
-    <li class="page-item"><a class="page-link" href="mygoal?goal_id2">2</a></li>
-    <li class="page-item"><a class="page-link" href="mygoal?goal_id3">3</a></li>
+    <li class="page-item"><a class="page-link" href="mygoal?goal_id=1">1</a></li>
+    <li class="page-item"><a class="page-link" href="mygoal?goal_id=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="mygoal?goal_id=3">3</a></li>
     <li class="page-item">
       <a class="page-link" href="mygoal2">Next</a>
     </li>

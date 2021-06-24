@@ -42,7 +42,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $page = 0;
+        if (isset($_GET['goal_id']) && is_numeric($_GET['goal_id']))
+        {
+            $page = intval($_GET['goal_id']) - 1;
+        }
+        echo $_GET['goal_id'];
+        return view('user.mygoal');
     }
 
     /**
