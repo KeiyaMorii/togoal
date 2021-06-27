@@ -71,15 +71,15 @@
                 <td bgcolor="#00a9ff">@if(isset($items[45])){{ $items[45]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="45"></button></td></tr>
         </table>
         <table border="2" class="right_middle">
-        <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position46"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position47"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position48"></button></td></tr>
-            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position49"></button></td>
-                <td bgcolor="#00a9ff"><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position50"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position51"></button></td></tr>
-            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position52"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position53"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position54"></button></td></tr>
+        <tr><td>@if(isset($items[46])){{ $items[46]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="46"></button></td>
+                <td>@if(isset($items[47])){{ $items[47]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="47"></button></td>
+                <td>@if(isset($items[48])){{ $items[48]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="48"></button></td></tr>
+            <tr><td>@if(isset($items[49])){{ $items[49]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="49"></button></td>
+                <td bgcolor="#00a9ff">@if(isset($items[50])){{ $items[50]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="50"></button></td>
+                <td>@if(isset($items[51])){{ $items[51]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="51"></button></td></tr>
+            <tr><td>@if(isset($items[52])){{ $items[52]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="52"></button></td>
+                <td>@if(isset($items[53])){{ $items[53]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="53"></button></td>
+                <td>@if(isset($items[54])){{ $items[54]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="54"></button></td></tr>
         </table>
     </div>
     <div class="mandara_under">
