@@ -95,15 +95,15 @@
                 <td>@if(isset($items[63])){{ $items[63]["content"] }}@endif<button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="63"></button></td></tr>
         </table>
         <table border="2">
-        <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position64"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position65"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position66"></button></td></tr>
-            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position67"></button></td>
-                <td bgcolor="#00a9ff"><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position68"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position69"></button></td></tr>
-            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position70"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position71"></button></td>
-                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position72"></button></td></tr>
+        <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="64"></button></td>
+                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="65"></button></td>
+                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="66"></button></td></tr>
+            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="67"></button></td>
+                <td bgcolor="#00a9ff"><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="68"></button></td>
+                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="69"></button></td></tr>
+            <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="70"></button></td>
+                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="71"></button></td>
+                <td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="72"></button></td></tr>
         </table>
         <table border="2" class="right_under">
         <tr><td><button type="button" class="btn btn-page" data-toggle="modal" data-target="#exampleModal" data-whatever="position73"></button></td>
